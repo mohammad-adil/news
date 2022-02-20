@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "db53a8e6-f6b4-48ab-b8d0-4d8b327fb114",
+		"name": "New App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"timeOfBirth\":\"12:00 AM\",\r\n        \"termsAccepted\":false,\r\n        \"userName\":\"Shah Aadil\",\r\n        \"email\":\"shsah@gmail.com\",\r\n        \"password\":\"adil@123\",\r\n        \"phone\":\"9090909090\",\r\n        \"gender\":\"Male\",\r\n        \"language\":\"Hindi\",\r\n        \"maritialStatus\":\"Sinlge\",\r\n        \"dob\":\"12/12/12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/v1/user/signup",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"signup"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add news",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newsTitle\":\" Budget 20222\",\r\n    \"newsDescription\":\" The budget for 2022\",\r\n    \"author\":\" News app\",\r\n    \"avatar\":\"1645372106492.PNG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/v1/news/add",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"news",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/v1/upload/image",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"upload",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update News",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  { \r\n      \"newssssTitle\":\" Budget \"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/v1/news/update/6212657afc5b0966db7b3bf5",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"news",
+						"update",
+						"6212657afc5b0966db7b3bf5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete News",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/v1/news/delete/6212657afc5b0966db7b3bf5",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"news",
+						"delete",
+						"6212657afc5b0966db7b3bf5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/v1/news/all?technology=UI&author=News app&search=sss&skip&sort",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"news",
+						"all"
+					],
+					"query": [
+						{
+							"key": "technology",
+							"value": "UI"
+						},
+						{
+							"key": "author",
+							"value": "News app"
+						},
+						{
+							"key": "search",
+							"value": "sss"
+						},
+						{
+							"key": "skip",
+							"value": null
+						},
+						{
+							"key": "sort",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
